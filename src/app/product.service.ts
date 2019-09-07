@@ -8,9 +8,7 @@ export class ProductService {
 
   private _albumUrl: string = '../assets/album.json';
 
-  constructor(
-    private _http: Http,
-  ) { }
+  constructor(private _http: Http) { }
 
   getAlbum(id: number): any {
     return this._http.get(this._albumUrl).map(
